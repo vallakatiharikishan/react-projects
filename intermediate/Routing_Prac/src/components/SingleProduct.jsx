@@ -1,0 +1,20 @@
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
+const SingleProduct = () => {
+  const { id } = useParams();
+
+
+ const navigate= useNavigate();
+  const handleBack=()=>{
+    navigate(-1);
+  };
+
+  return (
+    <div>
+      <h2>Single Product - {id}</h2>
+      <button onClick={handleBack}>Go Back</button>
+    </div>
+  );
+};
+
+export default SingleProduct;
